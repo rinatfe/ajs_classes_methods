@@ -1,0 +1,29 @@
+{
+  "name": "ajs_classes_methods",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rinatfe/ajs_classes_methods.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rinatfe/ajs_classes_methods/issues"
+  },
+  "homepage": "https://github.com/rinatfe/ajs_classes_methods#readme",
+  "description": "",
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "core-js": "^3.9.1"
+  }
+}
