@@ -16,8 +16,8 @@ export default class Character {
         this.type = type,
         this.health = 100,
         this.level = 1,
-        this.attack = obj[`${type}`][0],
-        this.defence = obj[`${type}`][1]
+        this.attack = obj[type][0],
+        this.defence = obj[type][1]
     }
 
     levelUp() {
@@ -26,49 +26,51 @@ export default class Character {
             this.attack = this.attack + (this.attack / 100 * 20);
             this.defence = this.defence + (this.defence / 100 * 20);
             this.health = 100;
+        } else {
+            throw new Error('Персонаж мертв, и уровень не может быть повышен')
         }
     }
 
     damage(points){
         if(this.health > 0) {
             this.health -= points * (1 - this.defence / 100);
-        }
+        } 
     }
 }
 
 export class Bowman extends Character {
-    constructor(name, type) {
-        super(name, type)
+    constructor(name) {
+        super(name, "Bowman")
     }
 }
 
 export class Swordsman extends Character {
-    constructor(name, type) {
-        super(name, type)
+    constructor(name) {
+        super(name, "Swordsman")
     }
 }
 
 export class Magician extends Character {
-    constructor(name, type) {
-        super(name, type)
+    constructor(name) {
+        super(name, "Magician")
     }
 }
 
 export class Undead extends Character {
-    constructor(name, type) {
-        super(name, type)
+    constructor(name) {
+        super(name, "Undead")
     }
 }
 
 export class Zombie extends Character {
-    constructor(name, type) {
-        super(name, type)
+    constructor(name) {
+        super(name, "Zombie")
     }
 }
 
 export class Daemon extends Character {
-    constructor(name, type) {
-        super(name, type)
+    constructor(name) {
+        super(name, "Daemon")
     }
 }
 
